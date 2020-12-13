@@ -12,7 +12,7 @@ body{
 
 .jy{
 	display: inline-block;
-	width: 800px;
+	width: 1500px;
 	height: 300px;
 	text-align: center;
 
@@ -185,8 +185,21 @@ li{
 .clear{
 	clear: both;
 }
+#oo{
+	display: none;
+}
+#oo1{
+	display: none;
+}
+#bd{
+	display: none;
+}
+#bc{
+	display: none;
+}
 </style>
 <body>
+<div id="jak">
 <div class="xlx">
 <div style="clear:both;"></div>
 <div class="dropdown">
@@ -222,7 +235,10 @@ li{
 	</div>
 </div>
 	<div class="bm">
-	<img src="im/哈哈.jpg" class="jy">
+	<img src="1.jpg" class="jy" id="aaa">
+	<img src="2.jpg" class="jy" id="aaa1">
+	<img src="3.jpg" class="jy" id="aaa2">
+	
 	</div>
 	<div>
 	<div class="li">
@@ -262,17 +278,142 @@ li{
 <div class="xw" id="l18"><a href="#"><p class="l1">水墨中国</p></a></div>
 <div class="xw" id="l19"><a href="#"><p class="l1">水墨中国</p></a></div>
 	</div>
-	<form>
-     <input type="reset"    value="注册"  name="re" />
-     <input type="button" value="登录"  name="bu" />
+	<form id="podso">
+     <input type="button"  id="hwy"  value="注册"  name="re" onclick="beng()" >
+     <input type="button" id="hjd" value="登录"  name="bu" onclick="byu()" >
 </form> 
 
+	
+</div>
+<div id="oo">
+	
 	<form> 
      账户: 
-     <input type = "text" name = "firstname" /> <br />
+     <input type = "text" name = "firstname" id="yh11"/> 
      密码: 
-     <input type = "text"  name = "lastname" /> 
+     <input type = "text"  name = "lastname" id="yh112"/> 
+
+     <input type="button" id="hqq" value="确定注册"  name="bu" onclick="beng1()" />
 </form> 
+</div>
+<div id="oo1">
+	
+	<form> 
+     账户: 
+     <input type = "text" name = "firstname" id="yh1"/> <br />
+     密码: 
+     <input type = "text"  name = "lastname" id="yh12"/> 
+
+     <input type="button" id="bu" value="确定登录"  name="bu" onclick="byu1()" />
+</form> 
+</div>
+<div id="bd">
+	<p>用户名或密码错误</p>
+	<input type="button" id="buu" value="返回页面"  name="buu" onclick="by1()" />
+</div>
+	<div id="bc">
+		<input type="button" id="bu1u" value="退出登录"  name="buu" onclick="by11()" />
+	</div>
+<script type="text/javascript">
+	var arr1 = new Array();
+	var arr2 = new Array();
+	var opp=0;
+	var i=0;
+	var i1=-1500;
+	var i2=-3000;
+	document.getElementById("aaa").style.position="absolute";
+	document.getElementById("aaa").style.left="0px";
+	document.getElementById("aaa").style.top="800px";
+	document.getElementById("aaa1").style.position="absolute";
+	document.getElementById("aaa1").style.left="-1500px";
+	document.getElementById("aaa1").style.top="800px";
+	document.getElementById("aaa2").style.position="absolute";
+	document.getElementById("aaa2").style.left="-3000px";
+	document.getElementById("aaa2").style.top="800px";
+	
+	id=setInterval("document.getElementById('aaa').style.left=i+'px';fon()",10);
+	id=setInterval("document.getElementById('aaa1').style.left=i1+'px';fon1()",10);
+	id=setInterval("document.getElementById('aaa2').style.left=i2+'px';fon2()",10);
+	function beng(){
+		jak.style.display="none";
+		oo.style.display="block"
+
+	}
+	function beng1(){
+		utext1=document.getElementById("yh11");
+		text1=utext1.value;
+		utext2=document.getElementById("yh112");
+		text2=utext2.value;
+		arr1[parseInt(opp)]=text1;
+
+		arr2[parseInt(opp)]=text2;
+		opp=opp+1;
+
+		jak.style.display="block";
+		oo.style.display="none";
+
+
+	}
+	function byu(){
+		jak.style.display="none";
+		oo1.style.display="block"
+
+	}
+	function byu1(){ 
+		utext11=document.getElementById("yh1");
+		text11=utext11.value;
+		utext12=document.getElementById("yh12");
+		text12=utext12.value;
+		for(var i=0;i<arr1.length;i++){
+			if(arr1[i]==text11&&arr2[i]==text12){
+				jak.style.display="block";
+				oo1.style.display="none";
+				find1=document.getElementById("podso");
+				find1.style.display="none";
+				bc.style.display="block";
+
+			}
+			else{
+				 oo1.style.display="none";
+				 bd.style.display="block";
+
+			}
+		}
+	}
+	function by1(){
+		bd.style.display="none";
+		jak.style.display="block";
+
+	} 
+		
+	function by11(){
+		find1.style.display="block";
+		bc.style.display="none";
+	}
+	function fon(){
+		i=i+1;
+			if(i==1500){
+				i=-3000
+			}
+		
+	}	
+	function fon1(){
+		i1=i1+1;
+			if(i1==1500){
+				i1=-3000
+			}
+		
+	}	
+	function fon2(){
+		i2=i2+1;
+			if(i2==1500){
+				i2=-3000
+			}
+		
+	}	
+
+
+</script>
 
 </body>
 </html>
