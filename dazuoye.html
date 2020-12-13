@@ -322,7 +322,12 @@ li{
 	<div id="bc">
 		<input type="button" id="bu1u" value="退出登录"  name="buu" onclick="by11()" />
 	</div>
+	<div id="bc1">
+		<input type="button" id="top" value="回到顶部"  name="buu" onclick="by11()" />
+	</div>
+
 <script type="text/javascript">
+	var top = document.getElementById('top');
 	var arr1 = new Array();
 	var arr2 = new Array();
 	var opp=0;
@@ -423,6 +428,10 @@ li{
 			}
 		
 	}	
+
+	top.onclick = function(){
+	document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
 
 
 </script>
