@@ -205,8 +205,9 @@ li{
 	height: 200px;
 	width: 100px;
 }
+
 </style>
-<body>
+<body id="body">
 <div id="jak">
 <div class="xlx">
 <div style="clear:both;"></div>
@@ -216,6 +217,7 @@ li{
   	<a href="#"><p>发源</p></a>
   </div>
 </div>
+
 <div class="dropdown">
   <a href="im/嗨.jpg">水墨中国</a>
   <div class="dropdown-content">
@@ -290,6 +292,11 @@ li{
      <input type="button"  id="hwy"  value="注册"  name="re" onclick="beng()" >
      <input type="button" id="hjd" value="登录"  name="bu" onclick="byu()" >
 </form> 
+<div id="top1">
+	<form id="top1">
+		<input type="button" id="top01" value="夜间模式"  name="buu1" onclick="by110()" />
+	</form>
+	</div>
 
 	
 </div>
@@ -322,12 +329,21 @@ li{
 	<div id="bc">
 		<input type="button" id="bu1u" value="退出登录"  name="buu" onclick="by11()" />
 	</div>
+	
 	<div id="bc1">
 		<input type="button" id="top" value="回到顶部"  name="buu" onclick="by11()" />
 	</div>
+	
+	
 
 <script type="text/javascript">
 	var top = document.getElementById('top');
+	var top1 = document.getElementById('top1');
+	var top01 = document.getElementById('top01');
+	top1.style.dispaly="block";
+	body.style.backgroundColor="yellow";
+	
+	j=0;
 	var arr1 = new Array();
 	var arr2 = new Array();
 	var opp=0;
@@ -426,6 +442,19 @@ li{
 			if(i2==1500){
 				i2=-3000
 			}
+		
+	}	
+	function by110(){
+		j=j+1;
+		if(j%2==1){
+		body.style.backgroundColor="blue";
+		top01.value="日间模式";
+	}
+	else{
+		body.style.backgroundColor="yellow";
+		top01.value="护眼模式";
+	}
+
 		
 	}	
 
